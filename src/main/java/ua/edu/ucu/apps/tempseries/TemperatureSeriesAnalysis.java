@@ -18,7 +18,8 @@ public class TemperatureSeriesAnalysis {
 
         validateTemperatures(temperatureSeries);
         
-        this.temperatures = Arrays.copyOf(temperatureSeries, temperatureSeries.length);
+        this.temperatures = Arrays.copyOf(temperatureSeries,
+        temperatureSeries.length);
         this.size = temperatureSeries.length;
     }
 
@@ -136,10 +137,10 @@ public class TemperatureSeriesAnalysis {
         return result;
     }
 
-    public double[] findTempsInRange(double lowerBound, double upperBound) {
+    public double[] findTempsInRange(double lowerB, double upperB) {
         int count = 0;
         for (int i = 0; i < size; i++) {
-            if (temperatures[i] >= lowerBound && temperatures[i] <= upperBound) {
+            if (temperatures[i] >= lowerB && temperatures[i] <= upperB) {
                 count++;
             }
         }
@@ -147,7 +148,7 @@ public class TemperatureSeriesAnalysis {
         double[] result = new double[count];
         int index = 0;
         for (int i = 0; i < size; i++) {
-            if (temperatures[i] >= lowerBound && temperatures[i] <= upperBound) {
+            if (temperatures[i] >= lowerB && temperatures[i] <= upperB) {
                 result[index++] = temperatures[i];
             }
         }
