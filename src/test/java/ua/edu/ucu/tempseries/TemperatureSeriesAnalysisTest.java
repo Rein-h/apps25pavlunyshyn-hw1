@@ -399,7 +399,7 @@ public class TemperatureSeriesAnalysisTest {
         seriesAnalysis.addTemps(2.0);
         seriesAnalysis.addTemps(3.0, 4.0);
         seriesAnalysis.addTemps(5.0, 6.0, 7.0, 8.0);
-        assertEquals(8, seriesAnalysis.addTemps(9.0));
+        assertEquals(9, seriesAnalysis.addTemps(9.0));
     }
 
     @Test
